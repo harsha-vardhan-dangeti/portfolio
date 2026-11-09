@@ -1,9 +1,10 @@
 import { projects } from '../data/portfolio';
 import { ProjectIcon, IconGithub, IconExternal } from './Icons';
 
-export default function Projects() {
-  // Everything that isn't a featured live project (those render in FeaturedWork).
-  const otherProjects = projects.filter(p => !p.featured);
+// Everything that isn't a featured live project (those render in FeaturedWork).
+// Renders nothing when there are none, rather than an empty grid.
+export default function Projects({ items = projects.filter(p => !p.featured) }) {
+  const otherProjects = items;
   if (otherProjects.length === 0) return null;
   return (
     <section id="projects" aria-label="Projects">

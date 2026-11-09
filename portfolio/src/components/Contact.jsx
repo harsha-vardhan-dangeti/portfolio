@@ -19,9 +19,9 @@ export default function Contact() {
             maxWidth: '48ch',
           }}
         >
-          Open to Full Stack & AI engineering roles — RAG pipelines,
-          schema-aware agents, and production LLM infrastructure. Open to
-          remote and hybrid arrangements.
+          Open to backend and AI engineering roles: production APIs, RAG
+          systems, and the evaluation that keeps them honest. Remote or
+          hybrid.
         </p>
 
         <a

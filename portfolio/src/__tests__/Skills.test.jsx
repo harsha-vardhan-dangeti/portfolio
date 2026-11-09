@@ -63,7 +63,7 @@ describe('Skills', () => {
   });
 
   it('is honest about skills with no public evidence', async () => {
-    await userEvent.click(screen.getByRole('button', { name: 'Pinecone' }));
+    await userEvent.click(screen.getByRole('button', { name: 'Vector Search' }));
     expect(within(panel()).getByText(/Not in a public project yet/)).toBeInTheDocument();
   });
 });

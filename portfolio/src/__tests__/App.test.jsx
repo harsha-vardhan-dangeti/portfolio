@@ -43,10 +43,9 @@ describe('Page routes', () => {
     expect(screen.getByRole('heading', { name: 'Work History' })).toBeInTheDocument();
   });
 
-  it('ProjectsPage renders live projects and the AI work grid', () => {
+  it('ProjectsPage renders live projects', () => {
     renderPage(<ProjectsPage />);
     expect(screen.getByRole('heading', { name: 'Live projects' })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: 'AI engineering work' })).toBeInTheDocument();
   });
 
   it('SkillsPage renders the skills heading', () => {

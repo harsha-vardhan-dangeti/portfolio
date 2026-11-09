@@ -4,7 +4,7 @@ export const personal = {
   nameLine2: "Dangeti",
   initials: "HVD",
   brand: "HVD",
-  title: "Full Stack & AI Engineer",
+  title: "Backend & AI Engineer",
   email: "harsha.vardhan.422812@gmail.com",
   location: "Gachibowli, Hyderabad, IN",
   locationShort: "Gachibowli, Hyderabad",
@@ -12,7 +12,7 @@ export const personal = {
   // Set to image path (e.g. "/profile.jpg") to show your photo; null shows initials placeholder
   avatar: "/profile.webp",
   // Tags shown in the home page profile card
-  profileStack: ["Python", "Rails", "RAG", "LangGraph", "MCP", "FastAPI", "BigQuery", "RAGAS"],
+  profileStack: ["Ruby on Rails", "Python", "REST APIs", "MySQL", "Redis", "RabbitMQ", "RAG", "RAGAS"],
   linkedin: {
     url: "https://www.linkedin.com/in/harshavardhandangeti/",
     handle: "linkedin.com/in/harshavardhandangeti",
@@ -25,31 +25,31 @@ export const personal = {
 };
 
 export const hero = {
-  badge: "Open to full stack and AI roles, remote or hybrid",
+  badge: "Open to backend and AI engineering roles, remote or hybrid",
   tagline: {
-    bold: "4 years shipping production Rails at Qualcomm.",
-    rest: " Now building the systems underneath the LLM — RAG pipelines, schema-aware agents, MCP servers, and the evaluation infrastructure that tells you when they break.",
+    bold: "4 years building production backend systems at Qualcomm.",
+    rest: " Now bringing the same backend discipline to LLM systems: RAG pipelines with measured retrieval quality, and the evaluation that catches regressions before users do.",
   },
   stats: [
-    { value: "4+",   label: "Years in production engineering" },
-    { value: "3",    label: "Live apps shipped this year" },
-    { value: "~40%", label: "Fewer hallucinations after my RAG eval work" },
+    { value: "1M+",  label: "API requests a day on Rails services I maintain" },
+    { value: "500K+", label: "Users of the Qualcomm apps I build" },
+    { value: "~40%", label: "Fewer RAG hallucinations (HyDE)" },
   ],
 };
 
 export const about = {
   heading: "Background",
   paragraphs: [
-    "I've spent 4 years building production Ruby on Rails applications — APIs that handle real load, schema migrations under live traffic, and the kind of debugging sessions that teach you more than any tutorial. That track record gave me strong opinions about API contracts, observability, and what it actually means to ship.",
-    "The transition to AI engineering is deliberate, not reactive. I'm building systems with measurable outcomes: RAG pipelines evaluated with RAGAS and G-Eval, a schema-aware BigQuery agent using LangGraph that replaces manual SQL queries, and MCP servers that make internal tools LLM-accessible. I delivered an internal workshop on RAG evaluation — live demo, benchmarks, failure modes — and a separate AI Trends 2025–2026 presentation to the engineering org.",
-    "I care about the gap between \"it works in the notebook\" and \"it works in production.\" That gap is where most AI projects fail, and where I spend my time. Python is leveling up alongside the Rails foundation.",
+    "I've spent 4 years building production Ruby on Rails APIs at Qualcomm: services handling 1M+ requests a day for 500K+ users, zero-downtime schema migrations on multi-million-row tables, RabbitMQ background jobs and Redis caching. That work gave me strong opinions about API contracts, failure handling, and what it takes to ship safely.",
+    "My AI work builds on that foundation. I built a RAGAS evaluation pipeline for an internal RAG system and used it to show that HyDE retrieval cut hallucinations on schema-sensitive queries by about 40%. I taught the method in a 45-minute internal workshop with a live demo, and my Vision2Code prototype, which turns design mockups into frontend code, was a Hot Finalist at Qualcomm's AIBUZZ competition.",
+    "I care about the gap between \"it works in the notebook\" and \"it works in production.\" Backend engineering is how you close it: clear contracts, tests, measurement and failure handling.",
   ],
   facts: [
     { label: "Location",          value: "Gachibowli, Hyderabad, IN" },
-    { label: "Current role",      value: "Software Developer (Rails)" },
+    { label: "Current role",      value: "IT Software Developer, Qualcomm" },
     { label: "Total experience",  value: "~4.5 yrs (incl. HPE internship)" },
-    { label: "Focus area",        value: "Full Stack & AI Engineering — RAG, Agents, MCP" },
-    { label: "Status",            value: "Open to Full Stack & AI roles · Remote/Hybrid", highlight: true },
+    { label: "Focus area",        value: "Backend & AI engineering: Rails and Python APIs, RAG evaluation" },
+    { label: "Status",            value: "Open to backend & AI roles · Remote/Hybrid", highlight: true },
     { label: "Outside tech",      value: "Distance running, VO₂ max tracking, meal prep, content creation" },
   ],
 };
@@ -61,8 +61,9 @@ export const experience = [
     dates: "2025 — Present · ~1.5 yrs",
     current: true,
     bullets: [
-      "Maintained and extended production Ruby on Rails APIs handling high-volume traffic; led zero-downtime schema migrations on live databases.",
-      "Built internal RAG evaluation pipeline using RAGAS and HyDE; reduced hallucination rate on schema-sensitive queries by ~40% in A/B testing against the baseline retrieval setup.",
+      "Maintain and extend production Ruby on Rails APIs serving 500K+ users and 1M+ requests a day.",
+      "Led zero-downtime schema migrations on live tables of several million rows.",
+      "Built a RAGAS evaluation pipeline for an internal RAG system and used it to A/B test retrieval changes: adding HyDE cut hallucinations on schema-sensitive queries by ~40% against the baseline (RAGAS faithfulness).",
       "Delivered 45-min RAG Evaluation workshop (live demo on production data) and AI Trends 2025–2026 presentation to an engineering org of 50+ engineers.",
     ],
     tags: ["Ruby on Rails", "PostgreSQL", "Python", "LangChain", "RAGAS", "BigQuery"]
@@ -73,11 +74,11 @@ export const experience = [
     dates: "2022 — 2025 · ~2.5 yrs",
     current: false,
     bullets: [
-      "Built and shipped Rails features end-to-end — database design, API implementation, frontend integration.",
-      "Wrote and maintained RSpec test coverage for REST APIs, and used RabbitMQ for asynchronous background job processing.",
-      "Used Docker to keep local development environments consistent with production, with Redis for caching and MySQL as the primary datastore.",
+      "Shipped Rails features end to end for apps used by 500K+ people: MySQL schema design, REST API implementation and frontend integration.",
+      "Moved long-running work off the request path into RabbitMQ background jobs, and cached hot reads in Redis.",
+      "Wrote and maintained RSpec suites for the REST APIs, and containerised local development with Docker to match production.",
     ],
-    tags: ["Ruby on Rails", "JavaScript", "MySQL", "Redis", "Rspec", "REST APIs", "RabbitMQ", "Docker"],
+    tags: ["Ruby on Rails", "JavaScript", "MySQL", "Redis", "RSpec", "REST APIs", "RabbitMQ", "Docker"],
   },
   {
     role: "Technical Solution Consultant (GRSB Internship)",
@@ -85,8 +86,7 @@ export const experience = [
     dates: "2022 · ~6 months",
     current: false,
     bullets: [
-      "Developed technical solutions that streamlined internal processes, resulting in a 20% increase in team efficiency during project execution over the six-month internship",
-      "Collaborated with cross-functional teams to identify bottlenecks and implement automation tools, reducing manual effort by 30% and improving overall project delivery timelines.",
+      "Built Python and shell automation for internal workflows with cross-functional teams, cutting manual effort by about 30%.",
     ],
     tags: ["Python", "Shell Scripting", "Automation", "Cross-functional Collaboration"],
   },
@@ -136,54 +136,8 @@ export const projects = [
     featured: true,
     demoLocked: true,
   },
-  {
-    title: "RAG Evaluation Suite",
-    description: "End-to-end evaluation pipeline for production RAG systems. Implements RAGAS metrics, HyDE, multi-query expansion, and automated regression testing with a visualization dashboard for retrieval quality over time.",
-    github: "#",
-    demo: null,
-    tags: ["Python", "LangChain", "RAGAS", "LlamaIndex"],
-    icon: "activity",
-  },
-  {
-    title: "Schema-Aware SQL Agent",
-    description: "Natural language → BigQuery pipeline with schema introspection, query validation, and automatic retry on semantic errors. Multi-table joins via LangGraph orchestration with a self-healing query loop.",
-    github: "#",
-    demo: null,
-    tags: ["LangGraph", "BigQuery", "BigQuery ML", "Python"],
-    icon: "database",
-  },
-  {
-    title: "MCP Server Toolkit",
-    description: "Production-grade MCP server with tool registration, schema validation, structured error handling, and LLM observability hooks. Makes internal tools LLM-accessible via the Model Context Protocol.",
-    github: "#",
-    demo: null,
-    tags: ["MCP Protocol", "Python", "FastAPI", "TypeScript"],
-    icon: "tool",
-  },
-  {
-    title: "Agentic RAG Pipeline",
-    description: "Multi-agent RAG system using CrewAI with specialized retrieval, synthesis, and critique agents. Includes Graph RAG for entity-relationship-aware retrieval across large document corpora.",
-    github: "#",
-    demo: null,
-    tags: ["CrewAI", "LlamaIndex", "Graph RAG", "Python"],
-    icon: "globe",
-  },
-  {
-    title: "LLM Observability Dashboard",
-    description: "Real-time monitoring for LLM applications: token costs, latency tracking, retrieval quality metrics, and hallucination detection. Built for visibility over production RAG deployments.",
-    github: "#",
-    demo: null,
-    tags: ["Python", "FastAPI", "React", "PostgreSQL"],
-    icon: "layout",
-  },
-  {
-    title: "BigQuery Vector Search",
-    description: "Semantic search layer on top of BigQuery using embeddings and BigQuery ML vector search. Combines structured SQL with unstructured semantic retrieval for a hybrid search experience over enterprise data.",
-    github: "#",
-    demo: null,
-    tags: ["BigQuery ML", "Vector Search", "Python", "GCP"],
-    icon: "box",
-  },
+  // Only add a project here once it has public code or a live demo. Projects
+  // without `featured: true` render in the grid on /projects.
 ];
 
 export const education = [
@@ -202,11 +156,11 @@ export const education = [
 export const strengths = [
   {
     title: "Production backend",
-    text: "Rails APIs at Qualcomm since 2022: zero-downtime migrations on live databases, RabbitMQ background jobs, Redis caching and RSpec coverage.",
+    text: "Rails APIs at Qualcomm since 2022, serving 500K+ users and 1M+ requests a day: zero-downtime migrations on multi-million-row tables, RabbitMQ background jobs, Redis caching and RSpec coverage.",
   },
   {
-    title: "RAG and agents",
-    text: "A RAG evaluation pipeline with RAGAS and HyDE that cut hallucinations by about 40%, plus LangGraph agents and MCP servers.",
+    title: "Measured RAG",
+    text: "A RAGAS evaluation pipeline that showed HyDE retrieval cut hallucinations by about 40%, taught to 50+ engineers in an internal workshop.",
   },
   {
     title: "Full stack product",
@@ -217,7 +171,7 @@ export const strengths = [
 // This portfolio is evidence too. Used by the skill explorer.
 export const siteBuild = {
   title: "This portfolio",
-  detail: "React SPA with client-side routing, a serverless GitHub stats API on Vercel and 135 Vitest + React Testing Library tests.",
+  detail: "React SPA with client-side routing, serverless GitHub and Credly APIs on Vercel, and 160+ Vitest + React Testing Library tests.",
   tags: ["React", "React Router", "Vite", "JavaScript", "HTML/CSS", "Vitest", "React Testing Library", "REST APIs", "Git"],
 };
 
@@ -228,7 +182,7 @@ export const skills = [
   },
   {
     category: "AI engineering",
-    items: ["RAGAS", "LangChain", "LangGraph", "LlamaIndex", "HyDE", "Graph RAG", "Embeddings", "Vector Search", "MCP Protocol", "LLM Observability", "Pinecone"],
+    items: ["RAGAS", "HyDE", "LangChain", "RAG evaluation", "Embeddings", "Vector Search"],
   },
   {
     category: "Frontend",
