@@ -12,7 +12,7 @@ export const personal = {
   // Set to image path (e.g. "/profile.jpg") to show your photo; null shows initials placeholder
   avatar: "/profile.webp",
   // Tags shown in the home page profile card
-  profileStack: ["Ruby on Rails", "Python", "REST APIs", "MySQL", "Redis", "RabbitMQ", "RAG", "RAGAS"],
+  profileStack: ["Ruby on Rails", "Python", "Sidekiq", "RabbitMQ", "Redis", "REST APIs", "LangGraph", "RAG"],
   linkedin: {
     url: "https://www.linkedin.com/in/harshavardhandangeti/",
     handle: "linkedin.com/in/harshavardhandangeti",
@@ -28,27 +28,27 @@ export const hero = {
   badge: "Open to backend and AI engineering roles, remote or hybrid",
   tagline: {
     bold: "4 years building production backend systems at Qualcomm.",
-    rest: " Now bringing the same backend discipline to LLM systems: RAG pipelines with measured retrieval quality, and the evaluation that catches regressions before users do.",
+    rest: " Rails services, Sidekiq and RabbitMQ pipelines, and storage automation across regional data centers. Now applying the same discipline to LLM workflows: deterministic guardrails, LLM judgment, and a human in the loop.",
   },
   stats: [
-    { value: "1M+",  label: "API requests a day on Rails services I maintain" },
-    { value: "500K+", label: "Users of the Qualcomm apps I build" },
-    { value: "~40%", label: "Fewer RAG hallucinations (HyDE)" },
+    { value: "200 TB", label: "Storage reclaimed by a lifecycle system I built" },
+    { value: "8,000+", label: "Git repos served by a GC service I rebuilt" },
+    { value: "70%",    label: "Less manual onboarding (≈40 admin hrs/month)" },
   ],
 };
 
 export const about = {
   heading: "Background",
   paragraphs: [
-    "I've spent 4 years building production Ruby on Rails APIs at Qualcomm: services handling 1M+ requests a day for 500K+ users, zero-downtime schema migrations on multi-million-row tables, RabbitMQ background jobs and Redis caching. That work gave me strong opinions about API contracts, failure handling, and what it takes to ship safely.",
-    "My AI work builds on that foundation. I built a RAGAS evaluation pipeline for an internal RAG system and used it to show that HyDE retrieval cut hallucinations on schema-sensitive queries by about 40%. I taught the method in a 45-minute internal workshop with a live demo, and my Vision2Code prototype, which turns design mockups into frontend code, was a Hot Finalist at Qualcomm's AIBUZZ competition.",
-    "I care about the gap between \"it works in the notebook\" and \"it works in production.\" Backend engineering is how you close it: clear contracts, tests, measurement and failure handling.",
+    "I've spent 4 years building production backend systems at Qualcomm: Ruby on Rails services, Sidekiq and RabbitMQ pipelines, and storage automation across regional data centers. I designed a storage lifecycle that reclaimed 200 TB, added end-to-end message tracking that ended silent message loss during broker incidents, and led Rails upgrades plus a San Diego to Las Vegas data-center migration with zero data loss. I'm on call for the services I build.",
+    "My AI work applies the same discipline. Job Radar, my daily job-triage pipeline in LangGraph, combines deterministic pre-filtering with LLM fit scoring and a human-review gate before any action is taken. At Qualcomm I've presented on AI/ML, vector databases, AWS SageMaker and agentic AI development, and I was a finalist in the QBUZZ Hackathon 2025.",
+    "I care about the gap between \"it works in the notebook\" and \"it works in production.\" Backend engineering is how you close it: clear contracts, tests, monitoring and failure handling.",
   ],
   facts: [
     { label: "Location",          value: "Gachibowli, Hyderabad, IN" },
     { label: "Current role",      value: "IT Software Developer, Qualcomm" },
     { label: "Total experience",  value: "~4.5 yrs (incl. HPE internship)" },
-    { label: "Focus area",        value: "Backend & AI engineering: Rails and Python APIs, RAG evaluation" },
+    { label: "Focus area",        value: "Backend & AI engineering: Rails and Python services, LLM workflows" },
     { label: "Status",            value: "Open to backend & AI roles · Remote/Hybrid", highlight: true },
     { label: "Outside tech",      value: "Distance running, VO₂ max tracking, meal prep, content creation" },
   ],
@@ -58,32 +58,34 @@ export const experience = [
   {
     role: "IT Software Developer",
     company: "Qualcomm",
-    dates: "2025 — Present · ~1.5 yrs",
+    dates: "Dec 2024 — Present · ~2 yrs",
     current: true,
     bullets: [
-      "Maintain and extend production Ruby on Rails APIs serving 500K+ users and 1M+ requests a day.",
-      "Led zero-downtime schema migrations on live tables of several million rows.",
-      "Built a RAGAS evaluation pipeline for an internal RAG system and used it to A/B test retrieval changes: adding HyDE cut hallucinations on schema-sensitive queries by ~40% against the baseline (RAGAS faithfulness).",
-      "Delivered 45-min RAG Evaluation workshop (live demo on production data) and AI Trends 2025–2026 presentation to an engineering org of 50+ engineers.",
+      "Designed and shipped a 3-stage automated storage lifecycle (archival, rebalancing, promotion) for ChipCode repositories across regional data centers, using scheduled Sidekiq workers to purge inactive repositories and delete expired archives. Reclaimed 200 TB of storage and cut manual cleanup effort by 80%.",
+      "Automated the Export Compliance reporting process, saving global teams 2 weeks of manual work per cycle and speeding validation for the U.S. Government's biannual compliance review.",
+      "Built end-to-end RabbitMQ message-status tracking (received, processing, completed, failed) across publisher and aggregator services for release workflows, eliminating silent message loss during broker incidents. On call for these services: built the monitoring alerts and lead incident response for 6 message types and 500+ messages a day.",
+      "Led the upgrade of 3 production services (ChipCode, RDC Git Services, Token Master) to Ruby 3.1.6 / Rails 6.1, raising unit test coverage by 15% and cutting job processing time by 20% with a Resque to Sidekiq-Cron migration. Then moved them from San Diego to Las Vegas with blue-green deployments, improving latency and reliability with zero data loss.",
+      "Modernized SlimFast, a legacy Git garbage-collection service for the LV and RDC regions: upgraded to Ruby 3.4.5 / Rails 8.1, added Swagger-documented REST APIs for bulk repack requests and status tracking, and moved execution to Sidekiq-Cron on Redis Sentinel. Reduced loose objects by 70% across 8,000+ repositories.",
+      "Improved Service Manager performance by 25% by upgrading it from Ruby 2.3 / Rails 3.2 to Ruby 3.1 / Rails 6.1 and re-architecting it with new API modules.",
     ],
-    tags: ["Ruby on Rails", "PostgreSQL", "Python", "LangChain", "RAGAS", "BigQuery"]
+    tags: ["Ruby on Rails", "Sidekiq", "RabbitMQ", "Redis", "Python", "SQL", "REST APIs", "React"],
   },
   {
     role: "Associate IT Software Developer",
     company: "Qualcomm",
-    dates: "2022 — 2025 · ~2.5 yrs",
+    dates: "Jul 2022 — Nov 2024 · ~2.5 yrs",
     current: false,
     bullets: [
-      "Shipped Rails features end to end for apps used by 500K+ people: MySQL schema design, REST API implementation and frontend integration.",
-      "Moved long-running work off the request path into RabbitMQ background jobs, and cached hot reads in Redis.",
-      "Wrote and maintained RSpec suites for the REST APIs, and containerised local development with Docker to match production.",
+      "Architected and deployed an automated email notification system that improved download and clone efficiency by 40%.",
+      "Revamped an LDAP-backed user provisioning API, cutting manual onboarding effort by 70% (about 40 admin hours a month).",
+      "Rebuilt the release cache update path, cutting cache update time by 25%, and added post-sync routing of customers to their nearest regional data center, making downloads and clones 35% faster.",
     ],
-    tags: ["Ruby on Rails", "JavaScript", "MySQL", "Redis", "RSpec", "REST APIs", "RabbitMQ", "Docker"],
+    tags: ["Ruby on Rails", "Python", "JavaScript", "Redis", "Sidekiq", "SQL", "RSpec", "CI/CD", "AWS"],
   },
   {
     role: "Technical Solution Consultant (GRSB Internship)",
     company: "Hewlett Packard Enterprise",
-    dates: "2022 · ~6 months",
+    dates: "Jan 2022 — Jul 2022 · ~6 months",
     current: false,
     bullets: [
       "Built Python and shell automation for internal workflows with cross-functional teams, cutting manual effort by about 30%.",
@@ -112,7 +114,7 @@ export const projects = [
   },
   {
     title: "Turtle Runners — Club Platform",
-    description: "Web app for a Hyderabad triathlon club: public landing page with a live countdown to the next session, member dashboard with RSVPs and training logs, and an admin console for events, members and testimonial moderation. Supabase Postgres with row-level security and Google OAuth.",
+    description: "Web app for a Hyderabad triathlon club: public landing page with a live countdown to the next session, member dashboard with RSVPs and training logs, and an admin console for events, members and testimonial moderation. Supabase Postgres with row-level security, Google OAuth, the Strava API and Google Maps.",
     github: "https://github.com/harsha-vardhan-dangeti/turtle-runners",
     demo: "https://turtlerunners.vercel.app",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
@@ -122,8 +124,8 @@ export const projects = [
     imageAlt: "Turtle Runners landing page with the headline 'Swim the lake. Ride the dawn. Run it home.'",
     highlights: [
       "Member and admin roles enforced in Postgres with row-level security, not just in the UI",
-      "Admin console for events, members and testimonial moderation",
-      "Runs fully in a seeded demo mode when no Supabase keys are present",
+      "Strava REST API imports members' running, cycling and swimming activity into one dashboard",
+      "Admin console for events, members and testimonial moderation, with Google Maps for event locations",
     ],
   },
   {
@@ -142,12 +144,12 @@ export const projects = [
 
 export const education = [
   {
-    degree: "Bachelor of Technology",
+    degree: "Bachelor of Engineering (B.E.)",
     field: "Computer Science & Engineering",
     institution: "Amrita Vishwa Vidyapeetham",
     location: "Coimbatore, IN",
-    dates: "2018 — 2022",
-    grade: "CGPA: 8.1/10",          // e.g. "CGPA: 8.4 / 10" — leave empty to hide
+    dates: "Jun 2018 — Mar 2022",
+    grade: "CGPA: 8.13/10",          // e.g. "CGPA: 8.4 / 10" — leave empty to hide
     highlights: [],     // e.g. ["Relevant coursework: ...", "Final year project: ..."]
   },
 ];
@@ -156,11 +158,11 @@ export const education = [
 export const strengths = [
   {
     title: "Production backend",
-    text: "Rails APIs at Qualcomm since 2022, serving 500K+ users and 1M+ requests a day: zero-downtime migrations on multi-million-row tables, RabbitMQ background jobs, Redis caching and RSpec coverage.",
+    text: "Rails services at Qualcomm since 2022: Sidekiq and RabbitMQ pipelines, on call for 500+ messages a day, and a storage lifecycle that reclaimed 200 TB.",
   },
   {
-    title: "Measured RAG",
-    text: "A RAGAS evaluation pipeline that showed HyDE retrieval cut hallucinations by about 40%, taught to 50+ engineers in an internal workshop.",
+    title: "LLM workflows",
+    text: "Job Radar: a LangGraph triage pipeline with deterministic pre-filtering, LLM fit scoring and a human-review gate before any action.",
   },
   {
     title: "Full stack product",
@@ -178,11 +180,11 @@ export const siteBuild = {
 export const skills = [
   {
     category: "Backend",
-    items: ["Ruby on Rails", "REST APIs", "FastAPI", "PostgreSQL", "MySQL", "Redis", "RabbitMQ", "Supabase"],
+    items: ["Ruby on Rails", "Sidekiq", "RabbitMQ", "Redis", "REST APIs", "FastAPI", "MySQL", "PostgreSQL", "Supabase"],
   },
   {
     category: "AI engineering",
-    items: ["RAGAS", "HyDE", "LangChain", "RAG evaluation", "Embeddings", "Vector Search"],
+    items: ["LangGraph", "LangChain", "Agentic workflows", "RAG pipelines", "Vector databases", "RAGAS", "PyTorch"],
   },
   {
     category: "Frontend",
@@ -190,7 +192,7 @@ export const skills = [
   },
   {
     category: "Languages",
-    items: ["Python", "Ruby", "JavaScript", "SQL"],
+    items: ["Python", "Ruby", "Java", "JavaScript", "SQL"],
   },
   {
     category: "Testing",
@@ -198,7 +200,7 @@ export const skills = [
   },
   {
     category: "Cloud & tooling",
-    items: ["BigQuery", "Google Cloud", "AWS", "Docker", "Git", "GitHub Actions"],
+    items: ["AWS", "Docker", "Jenkins", "CI/CD", "Git", "Vercel"],
   },
 ];
 
@@ -260,23 +262,16 @@ export const githubStats = {
 
 export const talks = [
   {
-    title: "AIBUZZ Hot Finalist — Vision2Code",
-    meta: "Qualcomm AIBUZZ · 2025 · Hot Finalist",
-    description: "Selected as a Hot Finalist at Qualcomm's internal AIBUZZ innovation competition for Vision2Code — a system that takes Figma mockups and hand-drawn sketch diagrams as input and generates production-ready frontend code in the chosen technology stack. The pipeline interprets visual design intent, understands component hierarchy from the sketch, and outputs structured, framework-specific components ready for integration.",
+    title: "Finalist — Qualcomm QBUZZ Hackathon 2025",
+    meta: "Qualcomm · 2025 · Finalist",
+    description: "Reached the finals of QBUZZ, Qualcomm's internal hackathon, in 2025.",
     icon: "trophy",
   },
   {
-    title: "RAG Evaluation: From Theory to Production",
-    meta: "Internal Engineering Talk · 45 min · Live Demo · Audience: 50+ engineers",
-    description: "Covered RAGAS framework, G-Eval, HyDE, and custom evaluation metrics for production RAG systems. Included a live evaluation run on a production pipeline demonstrating retrieval quality measurement, hallucination detection, and regression tracking across model changes.",
+    title: "Internal tech talks on emerging technology",
+    meta: "Qualcomm · Multiple presentations",
+    description: "Presented to Qualcomm teams on AI/ML, vector databases, AWS cloud services and SageMaker, and agentic AI development, helping teams evaluate and adopt new tools.",
     icon: "edit",
-    note: "Internal talk — slides available on request.",
-  },
-  {
-    title: "AI Engineering Trends 2025–2026",
-    meta: "Internal Presentation · Engineering Org",
-    description: "Surveyed the evolving AI engineering landscape: agentic frameworks, RAG advancements, MCP protocol adoption, LLM observability tooling, and production deployment patterns. Included concrete takeaways and a framework for evaluating new AI tools before adoption.",
-    icon: "monitor",
-    note: "Internal talk — slides available on request.",
+    note: "Internal talks — slides available on request.",
   },
 ];

@@ -19,9 +19,9 @@ export default function Contact() {
             maxWidth: '48ch',
           }}
         >
-          Open to backend and AI engineering roles: production APIs, RAG
-          systems, and the evaluation that keeps them honest. Remote or
-          hybrid.
+          Open to backend and AI engineering roles: production services,
+          message pipelines, and LLM workflows that hold up in production.
+          Remote or hybrid.
         </p>
 
         <a

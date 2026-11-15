@@ -56,14 +56,14 @@ describe('Skills', () => {
   });
 
   it('highlights the skill inside the evidence text', async () => {
-    await userEvent.click(screen.getByRole('button', { name: 'RAGAS' }));
+    await userEvent.click(screen.getByRole('button', { name: 'Sidekiq' }));
     const marks = panel().querySelectorAll('mark');
     expect(marks.length).toBeGreaterThan(0);
-    marks.forEach(m => expect(m.textContent.toLowerCase()).toBe('ragas'));
+    marks.forEach(m => expect(m.textContent.toLowerCase()).toBe('sidekiq'));
   });
 
   it('is honest about skills with no public evidence', async () => {
-    await userEvent.click(screen.getByRole('button', { name: 'Vector Search' }));
+    await userEvent.click(screen.getByRole('button', { name: 'PyTorch' }));
     expect(within(panel()).getByText(/Not in a public project yet/)).toBeInTheDocument();
   });
 });
