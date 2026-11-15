@@ -5,7 +5,7 @@ export const personal = {
   initials: "HVD",
   brand: "HVD",
   title: "Backend & AI Engineer",
-  email: "harsha.vardhan.422812@gmail.com",
+  email: "harshavardhan.dangeti2001@gmail.com",
   location: "Gachibowli, Hyderabad, IN",
   locationShort: "Gachibowli, Hyderabad",
   resumePdf: "https://drive.google.com/uc?export=download&id=1JFOjrIYu5S6Q3qrWltE_m1WWS5-rcATQ",
