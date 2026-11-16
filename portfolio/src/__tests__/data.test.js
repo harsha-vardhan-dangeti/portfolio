@@ -1,4 +1,6 @@
 import { describe, it, expect } from 'vitest';
+import { existsSync, readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { personal, hero, about, experience, projects, skills, certifications, talks } from '../data/portfolio';
 
 describe('personal', () => {
@@ -9,6 +11,15 @@ describe('personal', () => {
     expect(personal.email).toMatch(/@/);
     expect(personal.location).toBeTruthy();
     expect(personal.resumePdf).toMatch(/^(\/|https?:\/\/)/);
+  });
+
+  // A third-party link (Drive) once sent visitors to a sign-in page.
+  // Keep the resume self-hosted, and make sure the file actually ships.
+  it('self-hosts the resume PDF and the file exists in public/', () => {
+    expect(personal.resumePdf).toMatch(/^\/[\w-]+\.pdf$/);
+    const file = resolve(__dirname, '../../public', personal.resumePdf.slice(1));
+    expect(existsSync(file)).toBe(true);
+    expect(readFileSync(file).subarray(0, 5).toString()).toBe('%PDF-');
   });
 
   it('has valid linkedin shape', () => {

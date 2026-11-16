@@ -8,7 +8,7 @@ export const personal = {
   email: "harshavardhan.dangeti2001@gmail.com",
   location: "Gachibowli, Hyderabad, IN",
   locationShort: "Gachibowli, Hyderabad",
-  resumePdf: "https://drive.google.com/uc?export=download&id=1JFOjrIYu5S6Q3qrWltE_m1WWS5-rcATQ",
+  resumePdf: "/Harsha_Vardhan_Dangeti_Resume.pdf",
   // Set to image path (e.g. "/profile.jpg") to show your photo; null shows initials placeholder
   avatar: "/profile.webp",
   // Tags shown in the home page profile card
